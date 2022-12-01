@@ -80,6 +80,7 @@ class ShelfController extends Controller
     public function update(Request $request, $id)
     {
         try {
+            
             $item = shelf::find($id);
             $item->id =$request->id ;
             $request->name != null ? $item->Name = $request->name : null;
